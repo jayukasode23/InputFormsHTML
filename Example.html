@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Input Types</title>
+        <link rel="stylesheet" href="inputFormStyle.css">
+        
+    </head>
+    <body>
+          <form action="">
+                    <header class="headerCointer">
+                        <h1>**HTML FILE FORM INPUT FIELDS**</h1> </header>       
+                        <div>
+                            <label for="text">Text Input Type For Name:</label>
+                            <input type="text" id="text"name="text">
+                            <error-output class="text-error" for="text"></error-output>
+                        </div>
+                        <div>
+                            <label for="pwd">Password Input Type:</label>
+                            <input type="password" name="pwd" id="pwd">
+                        </div>
+                        <div>
+                            <label for="email">Email Input Type:</label>
+                            <input type="email" name="email" id="email">
+                            <error-output class="email-errors" for="text"></error-output>
+                        </div>
+                        <div>
+                            <label for="url">url Input Type:</label>
+                            <input type="url" name="url" id="url">
+                        </div>
+                        <div>
+                            <label for="number">Number Input Type:</label>
+                            <input type="number" name="number" id="number">
+                        </div>
+                        <div>
+                            <label for="tel">Tel Input Type:</label>
+                            <input type="tel" name="tel" id="tel">
+                        </div>
+                        <div>
+                            <label for="search">Search Input Type:</label>
+                            <input type="search" name="search" id="search">
+                            <output class="salary-output" for="salary">40000</output>
+                        </div>
+                        <div class="nativeDateTimePicker">
+                            <label for="party">Choose A Date And Time:</label>
+                            <input type="datetime-local" name="bday" id="party">
+                        </div>
+                        <div>
+                            <label for="salary">Choose Your Salary:</label>
+                            <input type="range" name="search" id="search"min="30000"max="500000"step="100"value="4000">
+                        </div>
+                        <div>
+                            <button >Submit</button>
+                        </div>
+        </form>
+        <script>
+            const text=document.querySelector('#text');
+            const textError=document.querySelector('.text-error');
+            text.addEventListener('input',function()
+            {
+                let nameRegex=RegExp('^[A-Z]{1}[a-z]{3,}$')
+                if(nameRegex.test(text.value))
+                textError.textContent="";
+                else
+                textError.textContent="Name is incorrect";
+            })
+            const emailId=document.querySelector('#email');
+            const emailError=document.querySelector('.email-errors');
+            
+            emailId.addEventListener('input',function()
+            {
+                let emailRegex=RegExp('^[a-z]{5,}[0-9]{3,}[@][a-z]{5,}[.][a-z]{3,}$')
+                if(emailRegex.test(emailId.value))
+                emailError.textContent="";
+                else
+                emailError.textContent="Email is incorrect";
+            })
+        
+             const salary=document.querySelector('#salary');
+             const output=document.querySelector('.salary-output');
+             salary.addEventListener('input',function(){
+                 output.textContent=salary.value;
+             })
+        </script>
+
+    
+    </header>
+</body>
+</html>
