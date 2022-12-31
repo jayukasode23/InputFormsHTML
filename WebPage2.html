@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Payroll Form</title>
+    <link rel="stylesheet" href = "PayRoll_form.css">
+   
+</head>
+
+<body> 
+    <header class = "header-content header">
+        <div class = "logo-content">
+            <img src = "empIcon.jpg" alt ="" width="5%">
+            <div>
+                <span class = "emp-text">EMPLOYEE</span><br>
+                <span class = "emp-text emp-payroll">PAYROLL</span>
+            </div>
+        </div>
+    </header>
+    <div class="form-content">
+        <form class = "form" action = "#" onsubmit = "save();return false">
+        <div class = "form-head">
+            Employee Payroll form
+
+        </div>
+        <div class = "row-content">
+            <label class = "label text" for = "name">Name</label>
+            <input class ="input" type ="text" id = "name" name="name" placeholder = "Your name...." required></input>
+            <error-output class = "text-error" for = "text"></error-output>
+        </div>
