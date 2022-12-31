@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Payroll Form</title>
+    <link rel="stylesheet" href = "Webpage.css">
+   
+</head>
+
+<body> 
+    <header class = "header-content header">
+        <div class = "logo-content">
+            <img src = "empIcon.jpg" alt ="" width="5%">
+            <div>
+                <span class = "emp-text">EMPLOYEE</span><br>
+                <span class = "emp-text emp-payroll">PAYROLL</span>
+            </div>
+        </div>
+    </header>
+    <div class="form-content">
+        <form class = "form" action = "#" onsubmit = "save();return false">
+        <div class = "form-head">
+            Employee Payroll form
+
+        </div>
+        <div class = "row-content">
+            <label class = "label text" for = "name">Name</label>
+            <input class ="input" type ="text" id = "name" name="name" placeholder = "Your name...." required></input>
+            <error-output class = "text-error" for = "text"></error-output>
+        </div>
+        <div class = "row-content">
+            <label class = "label text" for = "profile">Profile image</label>
+            <div class = "profile-radio-content">
+            </div>
+                <label>
+                    <input type = "radio" id = "profile1" name = "profile"
+                    value="empProfile5.png" required>
+                    <img class = "profile" id = "image1" src="empProfile5.png">
+                </label>
+
+                <label>
+                <input type = "radio" id = "profile2" name = "profile"
+                value="empProfile.png" required>
+                <img class = "profile" id = "image2" src="empProfile.png">
+            </label>
+
+            <label>
+            <input type = "radio" id = "profile3" name = "profile"
+            value="empProfile3.png" required>
+            <img class = "profile" id = "image3" src="empProfile3.png">
+        </label>
+
+        <label>
+        <input type = "radio" id = "profile4" name = "profile"
+        value="empProfile4.png" required>
+        <img class = "profile" id = "image4" src="empProfile4.png">
+    </label>
+            </div>
+        </div>
